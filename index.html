@@ -621,9 +621,9 @@ var patternDetails = {
 function openPatternModal(idx) {
 	var d = patternDetails[idx];
 	if (!d) return;
-	var imgSrc = 'patterns/0' + idx + '_';
+	var imgSrc = 'patterns-opt/0' + idx + '_';
 	var names = ['','辞别故土','渡口启程','远洋风浪','落地异域'];
-	document.getElementById('patternModalImg').src = 'patterns/0' + idx + '_' + names[idx] + '.png';
+	document.getElementById('patternModalImg').src = 'patterns-opt/0' + idx + '_' + names[idx] + '.png';
 	document.getElementById('patternModalTitle').textContent = d.title;
 	document.getElementById('patternModalSub').textContent = d.sub;
 	document.getElementById('patternModalBody').innerHTML = d.body;

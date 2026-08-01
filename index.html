@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>侨纹新叙 · 五邑侨乡花砖纹样数字转译</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green:#1A3C34;--red:#8B2A2A;--ochre:#D4A843;--blue:#2C5F7A;--cream:#F5F0E8;--gray:#D4C9B8;--text:#333;--muted:#888;--bg:#F7F3EC}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans SC",sans-serif;color:var(--text);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gray);border-radius:3px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,243,236,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(26,60,52,.08)}
+nav.hidden{transform:translateY(-100%);transition:transform .4s}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px}
+.nav-logo{font-family:"Noto Serif SC",serif;font-size:18px;font-weight:700;color:var(--green);text-decoration:none;letter-spacing:.05em}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;font-size:13px;color:var(--muted);letter-spacing:.03em;transition:color .3s;cursor:pointer}
+.nav-links a:hover,.nav-links a.active{color:var(--green)}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--green)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,#2C5F7A 0%,transparent 50%),radial-gradient(ellipse at 70% 60%,#8B2A2A 0%,transparent 40%),radial-gradient(ellipse at 50% 50%,#1A3C34 0%,#1A3C34 100%);opacity:.6}
+.hp{position:absolute;inset:0;background-image:url(data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M30%205%20L55%2030%20L30%2055%20L5%2030%20Z%22%20fill%3D%22none%22%20stroke%3D%22rgba(245%2C240%2C232%2C0.04)%22%20stroke-width%3D%221%22%2F%3E%3C%2Fsvg%3E);background-size:60px}
+.hc{position:relative;z-index:2;text-align:center;max-width:800px;padding:0 40px}
+.hs{font-family:Inter,sans-serif;font-size:13px;color:var(--ochre);letter-spacing:.3em;text-transform:uppercase;margin-bottom:20px;opacity:0;transform:translateY(20px);animation:fU .8s .2s forwards}
+.ht{font-family:"Noto Serif SC",serif;font-size:64px;font-weight:700;color:var(--cream);letter-spacing:.08em;line-height:1.15;margin-bottom:18px;opacity:0;transform:translateY(30px);animation:fU .8s .4s forwards}
+.ht em{font-style:normal;background:linear-gradient(135deg,var(--ochre),var(--red));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hd{font-size:16px;font-weight:300;color:rgba(245,240,232,.7);max-width:500px;margin:0 auto 40px;line-height:1.8;opacity:0;transform:translateY(20px);animation:fU .8s .6s forwards}
+.hsc{display:inline-flex;align-items:center;gap:8px;color:rgba(245,240,232,.4);font-size:13px;letter-spacing:.2em;opacity:0;animation:fU .8s .8s forwards}
+.arr{display:inline-block;animation:bd 2s infinite}
+.sec{max-width:1200px;margin:0 auto;padding:120px 40px}
+.sh{text-align:center;margin-bottom:80px}
+.st{font-family:Inter,sans-serif;font-size:11px;font-weight:600;color:var(--red);letter-spacing:.25em;text-transform:uppercase;margin-bottom:14px}
+.sti{font-family:"Noto Serif SC",serif;font-size:34px;font-weight:700;color:var(--green);letter-spacing:.04em;margin-bottom:14px}
+.sd{font-size:15px;font-weight:300;color:var(--muted);max-width:540px;margin:0 auto;line-height:1.8}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.pc{border-radius:12px;padding:44px 28px 36px;text-align:center;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s;border:1px solid rgba(26,60,52,.06)}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.pc::after{content:'';position:absolute;inset:0;background-image:url(data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20%205%20L35%2020%20L20%2035%20L5%2020%20Z%22%20fill%3D%22none%22%20stroke%3D%22%231A3C34%22%20stroke-width%3D%221%22%20opacity%3D%220.35%22%2F%3E%3C%2Fsvg%3E);background-size:40px 40px;opacity:.05;pointer-events:none}
+.pc:nth-child(1){background:linear-gradient(150deg,#ffffff 0%,#f6faf8 55%,#e4edea 100%)}
+.pc:nth-child(2){background:linear-gradient(150deg,#ffffff 0%,#faf4f1 55%,#f0dfd8 100%)}
+.pc:nth-child(3){background:linear-gradient(150deg,#ffffff 0%,#faf6ec 55%,#f0e4c8 100%)}
+.pc:nth-child(4){background:linear-gradient(150deg,#ffffff 0%,#f1f6f9 55%,#dce9f1 100%)}
+.pc:nth-child(1)::before{background:var(--green)}
+.pc:nth-child(2)::before{background:var(--red)}
+.pc:nth-child(3)::before{background:var(--ochre)}
+.pc:nth-child(4)::before{background:var(--blue)}
+.pc:hover{transform:translateY(-6px);box-shadow:0 16px 44px rgba(26,60,52,.12)}
+.pc-ghost{position:absolute;top:6px;right:12px;font-family:Inter,sans-serif;font-size:56px;font-weight:700;line-height:1;color:rgba(26,60,52,.06);pointer-events:none}
+.pc-icon{width:52px;height:52px;margin:0 auto 18px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.85);box-shadow:0 4px 14px rgba(26,60,52,.08);transition:transform .4s}
+.pc-icon svg{width:26px;height:26px}
+.pc:nth-child(1) .pc-icon{color:var(--green)}
+.pc:nth-child(2) .pc-icon{color:var(--red)}
+.pc:nth-child(3) .pc-icon{color:var(--ochre)}
+.pc:nth-child(4) .pc-icon{color:var(--blue)}
+.pc:hover .pc-icon{transform:scale(1.08) rotate(4deg)}
+.pc h3{font-family:"Noto Serif SC",serif;font-size:20px;font-weight:700;color:var(--green);margin-bottom:8px}
+.pc p{font-size:13px;color:var(--muted);line-height:1.7;position:relative;z-index:1}
+.pc-num{display:inline-block;margin-top:16px;font-family:Inter,sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;color:var(--gray);border-top:1px solid rgba(26,60,52,.12);padding-top:10px}
+.js{background:#fff}
+.js:nth-child(even){background:var(--bg)}
+.ji{max-width:1200px;margin:0 auto;padding:120px 40px}
+.jg{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.jr{direction:rtl}.jr>*{direction:ltr}
+.j-img{position:relative;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(26,60,52,.1);cursor:pointer}
+.j-img img{width:100%;display:block;transition:transform .6s}
+.j-img:hover img{transform:scale(1.02)}
+.j-img::after{content:'点击查看详情';position:absolute;bottom:14px;left:50%;transform:translateX(-50%);background:rgba(26,60,52,.75);backdrop-filter:blur(8px);color:#fff;font-size:12px;padding:6px 16px;border-radius:20px;opacity:0;transition:opacity .4s;white-space:nowrap}
+.j-img:hover::after{opacity:1}
+.jp{position:absolute;top:14px;left:14px;font-family:Inter,sans-serif;font-size:10px;font-weight:600;color:#fff;background:rgba(26,60,52,.75);padding:5px 12px;border-radius:20px;letter-spacing:.12em;z-index:2}
+.jc{font-family:Inter,sans-serif;font-size:12px;font-weight:600;color:var(--red);letter-spacing:.25em;margin-bottom:10px}
+.jti{font-family:"Noto Serif SC",serif;font-size:28px;font-weight:700;color:var(--green);margin-bottom:6px;line-height:1.25}
+.jsu{font-size:14px;color:var(--muted);margin-bottom:16px;font-weight:300}
+.jt{font-size:14.5px;color:var(--text);line-height:1.9;margin-bottom:20px}
+.je{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.je span{font-size:12px;color:var(--muted);background:rgba(212,201,184,.3);padding:4px 12px;border-radius:20px}
+.dp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.dp-item{background:rgba(26,60,52,.04);border-radius:6px;padding:12px 14px;border-left:3px solid}
+.dp-item:nth-child(1){border-color:var(--green)}
+.dp-item:nth-child(2){border-color:var(--red)}
+.dp-item:nth-child(3){border-color:var(--ochre)}
+.dp-item:nth-child(4){border-color:var(--blue)}
+.dp-item .dpn{font-family:Inter,sans-serif;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.15em;margin-bottom:2px}
+.dp-item h4{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
+.dp-item p{font-size:12px;color:var(--muted);line-height:1.6}
+.ex-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;margin-top:12px}
+.ex-item{cursor:pointer;border-radius:6px;overflow:hidden;background:rgba(245,240,232,.6);transition:transform .3s,box-shadow .3s}
+.ex-item:hover{transform:translateY(-3px);box-shadow:0 4px 16px rgba(26,60,52,.12)}
+.ex-item img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.ex-name{font-size:10px;color:var(--text);text-align:center;padding:5px 4px;font-weight:500}
+.modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-inner{background:#fff;border-radius:12px;max-width:800px;width:90%;max-height:85vh;overflow:auto;padding:32px;position:relative}
+.modal-close{position:absolute;top:12px;right:16px;font-size:28px;cursor:pointer;color:var(--muted);background:none;border:none;font-family:Inter;line-height:1;z-index:3}
+.modal-close:hover{color:var(--text)}
+.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+.modal-grid img{width:100%;border-radius:6px;display:block}
+.modal-full img{width:100%;border-radius:6px;display:block;margin-bottom:16px}
+.modal-title{font-family:"Noto Serif SC",serif;font-size:20px;font-weight:700;color:var(--green);margin-bottom:4px}
+.modal-sub{font-size:13px;color:var(--muted);margin-bottom:16px}
+.modal-body{font-size:14px;line-height:1.9;color:var(--text)}
+.modal-body p{margin-bottom:12px}
+.modal-body strong{color:var(--green)}
+.es{background:var(--green)}
+.ei{max-width:1200px;margin:0 auto;padding:120px 40px}
+.es .sti{color:var(--cream)}
+.es .st{color:var(--ochre)}
+.es .sd{color:rgba(245,240,232,.6)}
+.eg{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:60px}
+.ei .e-item{background:rgba(255,255,255,.06);border-radius:8px;overflow:hidden;transition:transform .4s;cursor:pointer}
+.ei .e-item:hover{transform:translateY(-4px)}
+.ei .e-item img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.el{padding:8px 10px;font-size:11px;color:var(--cream);text-align:center;font-weight:300}
+
+
+
+
+
+
+
+.ps{background:var(--bg)}
+.pi{max-width:1200px;margin:0 auto;padding:120px 40px}
+.pal{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:60px}
+.pli{border-radius:8px;overflow:hidden;transition:transform .3s}
+.pli:hover{transform:translateY(-4px)}
+.psw{height:100px;display:flex;align-items:center;justify-content:center}
+.pin{background:#fff;padding:10px 14px;text-align:center}
+.pin h4{font-size:14px;font-weight:500;color:var(--text);margin-bottom:2px}
+.pin p{font-size:11px;color:var(--muted);font-family:Inter,sans-serif}
+footer{background:var(--green);color:var(--cream);text-align:center;padding:80px 40px}
+footer h2{font-family:"Noto Serif SC",serif;font-size:26px;font-weight:700;margin-bottom:12px}
+footer p{font-size:14px;color:rgba(245,240,232,.5);max-width:480px;margin:0 auto 24px;line-height:1.8}
+.fd{width:40px;height:1px;background:rgba(245,240,232,.2);margin:24px auto}
+.r{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.r.v{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+@keyframes fU{to{opacity:1;transform:translateY(0)}}
+@keyframes bd{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media(max-width:1024px){.pg{grid-template-columns:repeat(2,1fr)}.jg{grid-template-columns:1fr;gap:40px}.dp{grid-template-columns:1fr}.ag,.pal{grid-template-columns:repeat(2,1fr)}.modal-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.ht{font-size:36px}.sti{font-size:26px}.nav-links{display:none}.sec,.ji,.ei,.aii,.pi{padding:80px 24px}.pg,.ag{grid-template-columns:1fr}.pal{grid-template-columns:repeat(2,1fr)}.eg{grid-template-columns:repeat(2,1fr)}}
+.mock-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:60px}
+.mock-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(26,60,52,.08);transition:transform .4s,box-shadow .4s}
+.mock-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(26,60,52,.12)}
+.mock-img img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+.mock-info{padding:20px 24px}
+.mock-info h3{font-family:"Noto Serif SC",serif;font-size:18px;font-weight:700;color:var(--green);margin-bottom:6px}
+.mock-info p{font-size:13px;color:var(--muted);line-height:1.7}
+@media(max-width:768px){.mock-grid{grid-template-columns:1fr}}
+.app-section{background:#fff}
+.app-inner{max-width:1200px;margin:0 auto;padding:120px 40px}
+.app-chapter{margin-bottom:100px;border-bottom:1px solid rgba(26,60,52,.08);padding-bottom:80px}
+.app-chapter:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.app-head{display:flex;align-items:center;gap:20px;margin-bottom:40px}
+.app-num{font-family:Inter,sans-serif;font-size:56px;font-weight:300;color:var(--gray);line-height:1;min-width:80px}
+.app-head-text h3{font-family:"Noto Serif SC",serif;font-size:28px;font-weight:700;color:var(--green);margin-bottom:4px}
+.app-head-text p{font-size:14px;color:var(--muted);letter-spacing:.05em}
+.app-body{display:grid;grid-template-columns:1fr 260px 1fr;gap:36px;align-items:start}
+.app-side{position:relative}
+.app-side-img{border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(26,60,52,.1);background:#f2ecdf}
+.app-side-img img{width:100%;display:block;aspect-ratio:1;object-fit:cover;transition:transform .6s}
+.app-side:hover .app-side-img img{transform:scale(1.03)}
+.app-side-tag{position:absolute;bottom:12px;left:12px;background:rgba(26,60,52,.78);backdrop-filter:blur(6px);color:#fff;font-size:12px;padding:5px 12px;border-radius:20px}
+.app-flow{display:flex;flex-direction:column;gap:26px;padding:16px 8px;position:relative}
+.flow-line{position:absolute;left:19px;top:24px;bottom:24px;width:2px;background:rgba(212,201,184,.5)}
+.flow-progress{display:block;width:100%;height:0;background:linear-gradient(180deg,var(--ochre),var(--red));transition:height 1.2s ease}
+.app-flow.active .flow-progress{height:100%}
+.flow-step{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;opacity:.45;transition:opacity .5s}
+.flow-step.on{opacity:1}
+.flow-icon{width:38px;height:38px;border-radius:50%;background:#fff;border:2px solid var(--gray);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--green);transition:all .4s;z-index:1}
+.flow-step.on .flow-icon{border-color:var(--ochre);color:var(--red);box-shadow:0 0 0 4px rgba(212,168,67,.15)}
+.flow-step b{font-size:14px;font-weight:600;color:var(--text)}
+.flow-step i{font-size:11px;color:var(--muted);font-style:normal;line-height:1.5}
+.app-desc{max-width:720px;margin:36px auto 0;padding:28px 32px;background:var(--paper);border-radius:10px;border-left:4px solid var(--ochre)}
+.app-desc p{font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px}
+.app-desc strong{color:var(--green)}
+.app-kw{display:flex;gap:10px;margin-top:12px}
+.app-kw span{font-size:13px;color:var(--red);background:rgba(139,42,42,.08);padding:4px 14px;border-radius:20px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-section{background:var(--paper)}
+.about-inner{max-width:1200px;margin:0 auto;padding:120px 40px}
+.about-body{max-width:860px;margin:0 auto 60px}
+.about-lead{font-size:17px;color:var(--text);line-height:2;margin-bottom:18px;text-align:center;font-weight:300}
+.about-stats{display:flex;justify-content:center;gap:48px}
+.about-stat{text-align:center}
+.about-stat b{display:block;font-family:"Noto Serif SC",serif;font-size:52px;font-weight:700;color:var(--green);line-height:1.1}
+.about-stat span{font-size:13px;color:var(--muted);letter-spacing:.1em}
+.entry-section{background:var(--green)}
+.entry-inner{max-width:1200px;margin:0 auto;padding:120px 40px}
+.entry-section .sti{color:var(--cream)}
+.entry-section .st{color:var(--ochre)}
+.entry-card{max-width:620px;margin:0 auto 32px;background:rgba(255,255,255,.07);border-radius:12px;padding:40px 48px;backdrop-filter:blur(8px)}
+.entry-row{display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(245,240,232,.1)}
+.entry-row:last-child{border-bottom:none}
+.entry-label{width:110px;font-size:14px;color:rgba(245,240,232,.6);font-weight:500;letter-spacing:.05em}
+.entry-value{font-size:15px;color:var(--cream);font-weight:500}
+
+@media(max-width:768px){.about-stats{flex-direction:column;gap:24px}.entry-card{padding:32px 24px}}
+
+</style>
+</head>
+<body><nav id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="#">侨纹新叙</a>
+<ul class="nav-links">
+<li><a href="#about">作品介绍</a></li>
+<li><a href="#process">创作路径</a></li>
+<li><a href="#c1">辞别故土</a></li>
+<li><a href="#c2">渡口启程</a></li>
+<li><a href="#c3">远洋风浪</a></li>
+<li><a href="#c4">落地异域</a></li>
+<li><a href="#extraction">提取图鉴</a></li>
+<li><a href="#packaging">应用转化</a></li>
+</ul>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hp"></div>
+<div class="hc">
+<p class="hs">Wuyi Qiaoxiang · Pattern Translation</p>
+<h1 class="ht">侨纹<em>新叙</em></h1>
+<p class="hd">以五邑侨乡花砖为载体，将碉楼、禾穗、海浪、骑楼等文化符号<br>转化为现代纹样语言，讲述华侨离乡远行的四章叙事。</p>
+<div class="hsc"><span>向下探索</span><span class="arr">↓</span></div>
+</div>
+</section>
+
+
+<!-- 作品介绍 -->
+<section id="about" class="about-section">
+<div class="about-inner">
+<div class="sh r"><p class="st">作品介绍</p><h2 class="sti">侨纹新叙 · 五邑侨乡纹样再造</h2></div>
+<div class="about-body r">
+<p class="about-lead">以五邑侨乡为叙事原点，从碉楼花窗、簕杜鹃禾穗、潭江水纹、海浪罗盘、骑楼铁艺等文化符号中提取视觉元素，遵循「发现—提炼—转化」的创作路径，构建「辞别故土—渡口启程—远洋风浪—落地异域」四章叙事纹样体系。</p>
+<p class="about-lead">作品将传统纹样转译为现代数字视觉语言，落地于新会陈皮礼盒、侨乡茶礼盒、侨航纪念套装与侨乡香氛产品四大应用场景，覆盖地方特产、茶文化、旅游传播与生活美学，探索五邑侨乡纹样在当代生活中的多元可能。</p>
+</div>
+<div class="about-stats">
+<div class="about-stat r d1"><b>04</b><span>章叙事纹样</span></div>
+<div class="about-stat r d2"><b>11</b><span>组元素提取</span></div>
+<div class="about-stat r d3"><b>04</b><span>类应用场景</span></div>
+</div>
+</div>
+</section>
+
+<section id="process" class="sec">
+<div class="sh r"><p class="st">创作路径</p><h2 class="sti">发现 · 提炼 · 重建 · 转译</h2><p class="sd">从五邑侨乡文化中提取视觉符号，通过纹样转化，形成具有现代应用价值的侨乡纹样体系</p></div>
+<div class="pg">
+<div class="pc r d1">
+<div class="pc-ghost">01</div>
+<div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+<h3>发现</h3>
+<p>从五邑侨乡建筑花窗、地域植物、海洋文化中寻找具有代表性的视觉符号</p>
+<span class="pc-num">01</span>
+</div>
+<div class="pc r d2">
+<div class="pc-ghost">02</div>
+<div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6" transform="rotate(45 12 12)"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div>
+<h3>提炼</h3>
+<p>提取核心形态线条与结构关系，去除具象元素，进行几何化处理</p>
+<span class="pc-num">02</span>
+</div>
+<div class="pc r d3">
+<div class="pc-ghost">03</div>
+<div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+<h3>重建</h3>
+<p>通过轴对称构成、重复排列与色彩重组，构建现代纹样</p>
+<span class="pc-num">03</span>
+</div>
+<div class="pc r d4">
+<div class="pc-ghost">04</div>
+<div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M14 6l6 6-6 6"/></svg></div>
+<h3>转译</h3>
+<p>将纹样应用于数字界面，转化为UI组件，延续传统文化</p>
+<span class="pc-num">04</span>
+</div>
+</div>
+</section><!-- CHAPTER 1: 辞别故土 -->
+<section id="c1" class="js">
+<div class="ji">
+<div class="jg r">
+<div class="j-img" onclick="openPatternModal(1)"><span class="jp">第壹章</span><img src="patterns-opt/01_辞别故土.png" alt="辞别故土" loading="lazy"></div>
+<div>
+<p class="jc">Chapter 01 · 辞别故土</p>
+<h2 class="jti">离乡远行 · 眷恋家园</h2>
+<p class="jsu">簕杜鹃 · 麦穗 · 建筑花窗</p>
+<div class="dp">
+<div class="dp-item"><div class="dpn">发现</div><h4>侨乡花窗与乡土植物</h4><p>从五邑侨乡传统建筑花窗中提取窗格结构，从簕杜鹃、麦穗等地域植物中寻找文化符号</p></div>
+<div class="dp-item"><div class="dpn">提炼</div><h4>花瓣几何与窗格线条</h4><p>将簕杜鹃花瓣形态几何化，提取麦穗排列规律，花窗简化为窗格交叉线条</p></div>
+<div class="dp-item"><div class="dpn">重建</div><h4>对称花卉纹样</h4><p>以花卉为中心、麦穗为辅助、花窗为边框，通过轴对称构成重组为完整纹样</p></div>
+<div class="dp-item"><div class="dpn">转译</div><h4>卡片边框与分割装饰</h4><p>花窗边框转为UI卡片装饰线，麦穗纹作为分割符号，簕杜鹃作为按钮点缀</p></div>
+</div>
+<div class="je"><span>簕杜鹃</span><span>麦穗</span><span>建筑花窗</span><span>砖红色</span></div>
+<div class="ex-grid">
+<div class="ex-item" data-extract="禾穗提取.png" data-photo="禾穗图片.png" data-name="禾穗 · 土地记忆"><img src="assets/禾穗提取.png" alt="禾穗"><div class="ex-name">禾穗</div></div>
+<div class="ex-item" data-extract="簕杜鹃提取.png" data-photo="簕杜鹃图片.png" data-name="簕杜鹃 · 故土之花"><img src="assets/簕杜鹃提取.png" alt="簕杜鹃"><div class="ex-name">簕杜鹃</div></div>
+<div class="ex-item" data-extract="花窗提炼.png" data-photo="花窗图片.png" data-name="花窗 · 侨乡印记"><img src="assets/花窗提炼.png" alt="花窗"><div class="ex-name">花窗</div></div>
+</div>
+</div></div></div></section>
+
+<!-- CHAPTER 2: 渡口启程 -->
+<section id="c2" class="js">
+<div class="ji">
+<div class="jg jr">
+<div class="j-img" onclick="openPatternModal(2)"><span class="jp">第贰章</span><img src="patterns-opt/02_渡口启程.png" alt="渡口启程" loading="lazy"></div>
+<div>
+<p class="jc">Chapter 02 · 渡口启程</p>
+<h2 class="jti">水路交汇 · 扬帆远航</h2>
+<p class="jsu">潭江水纹 · 木棉花 · 船帆 · 油纸伞</p>
+<div class="dp">
+<div class="dp-item"><div class="dpn">发现</div><h4>潭江水路与岭南生活</h4><p>从潭江水纹、木棉花、船帆、油纸伞中寻找五邑水路交通与侨乡生活气息的文化符号</p></div>
+<div class="dp-item"><div class="dpn">提炼</div><h4>水纹曲线与花卉结构</h4><p>提取水纹流动曲线、木棉五瓣结构、船帆展开形态，将自然元素几何化</p></div>
+<div class="dp-item"><div class="dpn">重建</div><h4>水路启航纹样</h4><p>水纹为底、木棉花为主体、船帆为中心符号的轴对称构成，表现离乡时刻</p></div>
+<div class="dp-item"><div class="dpn">转译</div><h4>背景底纹与进度指示</h4><p>水纹连续纹样作为页面背景底纹，船帆符号用于Loading动画</p></div>
+</div>
+<div class="je"><span>潭江水纹</span><span>木棉花</span><span>船帆</span><span>油纸伞</span></div>
+<div class="ex-grid">
+<div class="ex-item" data-extract="水流提取.png" data-photo="水流图片.png" data-name="水流 · 连接世界"><img src="assets/水流提取.png" alt="水流"><div class="ex-name">水纹</div></div>
+<div class="ex-item" data-extract="木棉提取.png" data-photo="木棉花图片.png" data-name="木棉 · 故土力量"><img src="assets/木棉提取.png" alt="木棉"><div class="ex-name">木棉</div></div>
+</div>
+</div></div></div></section>
+
+<!-- CHAPTER 3: 远洋风浪 -->
+<section id="c3" class="js">
+<div class="ji">
+<div class="jg r">
+<div class="j-img" onclick="openPatternModal(3)"><span class="jp">第叁章</span><img src="patterns-opt/03_远洋风浪.png" alt="远洋风浪" loading="lazy"></div>
+<div>
+<p class="jc">Chapter 03 · 远洋风浪</p>
+<h2 class="jti">跨越风浪 · 探索方向</h2>
+<p class="jsu">海浪 · 罗盘 · 船舵 · 海鸥 · 星辰</p>
+<div class="dp">
+<div class="dp-item"><div class="dpn">发现</div><h4>远洋航海文化</h4><p>从海浪、航海罗盘、船舵、海鸥、星辰航线与船锚中提取海洋文化符号</p></div>
+<div class="dp-item"><div class="dpn">提炼</div><h4>曲线与放射结构</h4><p>提取海浪起伏曲线、罗盘方向结构、船舵放射形、海鸥飞翔姿态</p></div>
+<div class="dp-item"><div class="dpn">重建</div><h4>海洋探索纹样</h4><p>以海浪为底纹、罗盘与船舵结合为中心主体、星辰点缀背景的对称构成</p></div>
+<div class="dp-item"><div class="dpn">转译</div><h4>导航与进度装饰</h4><p>罗盘纹样作为导航指示器，海浪纹用于页面滚动进度条装饰</p></div>
+</div>
+<div class="je"><span>海浪</span><span>罗盘</span><span>船舵</span><span>海鸥</span><span>星辰</span></div>
+<div class="ex-grid">
+<div class="ex-item" data-extract="海浪提取.png" data-photo="海浪图片.png" data-name="海浪 · 远洋征途"><img src="assets/海浪提取.png" alt="海浪"><div class="ex-name">海浪</div></div>
+<div class="ex-item" data-extract="指南针提取.png" data-photo="指南针图片.png" data-name="指南针 · 探索方向"><img src="assets/指南针提取.png" alt="指南针"><div class="ex-name">指南针</div></div>
+</div>
+</div></div></div></section>
+
+<!-- CHAPTER 4: 落地异域 -->
+<section id="c4" class="js">
+<div class="ji">
+<div class="jg jr">
+<div class="j-img" onclick="openPatternModal(4)"><span class="jp">第肆章</span><img src="patterns-opt/04_落地异域.png" alt="落地异域" loading="lazy"></div>
+<div>
+<p class="jc">Chapter 04 · 落地异域</p>
+<h2 class="jti">骑楼花窗 · 中西融合</h2>
+<p class="jsu">骑楼花窗 · 铁艺卷草 · 金山箱 · 鸡蛋花</p>
+<div class="dp">
+<div class="dp-item"><div class="dpn">发现</div><h4>侨居建筑与南洋风物</h4><p>从海外骑楼花窗、铁艺栏杆卷草纹、金山箱锁扣、鸡蛋花中寻找中西融合符号</p></div>
+<div class="dp-item"><div class="dpn">提炼</div><h4>拱形窗格与曲线铁艺</h4><p>提取拱形窗框与花窗格纹、铁艺曲线、锁扣结构、鸡蛋花五瓣形态</p></div>
+<div class="dp-item"><div class="dpn">重建</div><h4>中西融合纹样</h4><p>以骑楼花窗为核心、铁艺卷草为边框、鸡蛋花为四角装饰的融合纹样</p></div>
+<div class="dp-item"><div class="dpn">转译</div><h4>主视觉背景与边框</h4><p>骑楼花窗作为Hero主视觉背景，铁艺纹用于卡片边框装饰线</p></div>
+</div>
+<div class="je"><span>骑楼花窗</span><span>铁艺卷草</span><span>金山箱</span><span>鸡蛋花</span></div>
+<div class="ex-grid">
+<div class="ex-item" data-extract="骑楼花窗提取.png" data-photo="骑楼花窗图片.png" data-name="骑楼花窗 · 中西融合"><img src="assets/骑楼花窗提取.png" alt="骑楼花窗"><div class="ex-name">骑楼花窗</div></div>
+<div class="ex-item" data-extract="铁艺栏杆提取.png" data-photo="铁艺栏杆图片.png" data-name="铁艺 · 南洋装饰"><img src="assets/铁艺栏杆提取.png" alt="铁艺"><div class="ex-name">铁艺</div></div>
+<div class="ex-item" data-extract="鸡蛋花提取.png" data-photo="鸡蛋花图片.png" data-name="鸡蛋花 · 异域生命"><img src="assets/鸡蛋花提取.png" alt="鸡蛋花"><div class="ex-name">鸡蛋花</div></div>
+<div class="ex-item" data-extract="金山箱提取.png" data-photo="金山箱图片.png" data-name="金山箱 · 记忆载体"><img src="assets/金山箱提取.png" alt="金山箱"><div class="ex-name">金山箱</div></div>
+</div>
+</div></div></div></section><!-- PACKAGING APPLICATION -->
+
+<section id="packaging" class="app-section">
+<div class="app-inner">
+<div class="sh r"><p class="st">应用转化</p><h2 class="sti">纹样 · 商业转化</h2><p class="sd">四章纹样分别落地于地方特产、茶文化、旅游传播与生活美学，验证侨乡纹样的延展可能</p></div>
+<div class="app-chapter" id="app1">
+<div class="app-head r">
+<div class="app-num">01</div>
+<div class="app-head-text"><h3>辞别故土</h3><p>故土印记 · 乡情初始</p></div>
+</div>
+<div class="app-body">
+<div class="app-side app-pattern r d1">
+<div class="app-side-img"><img src="patterns-opt/01_辞别故土.png" alt="辞别故土纹样原稿" loading="lazy"></div>
+<span class="app-side-tag">纹样原稿</span>
+</div>
+<div class="app-flow r d2">
+<div class="flow-line"><span class="flow-progress"></span></div>
+<div class="flow-step"><span class="flow-icon">◈</span><b>文化元素</b><i>碉楼 · 花窗 · 簕杜鹃 · 禾穗</i></div>
+<div class="flow-step"><span class="flow-icon">↧</span><b>图形提炼</b><i>几何化 · 简化</i></div>
+<div class="flow-step"><span class="flow-icon">◉</span><b>纹样重构</b><i>对称构成 · 重组</i></div>
+<div class="flow-step"><span class="flow-icon">▣</span><b>产品应用</b><i>新会陈皮礼盒</i></div>
+</div>
+<div class="app-side app-mockup r d3">
+<div class="app-side-img"><img src="applications/01_辞别故土.png" alt="新会陈皮礼盒" loading="lazy"></div>
+<span class="app-side-tag">新会陈皮礼盒</span>
+</div>
+</div>
+<div class="app-desc r">
+<p><strong>设计转译：</strong>以五邑侨乡代表性建筑——碉楼为核心视觉符号，将其挺拔的建筑轮廓转化为纹样中心结构；结合象征乡土滋养的禾穗，以及代表生命与热情的簕杜鹃，构建关于「故土记忆」的视觉语言。</p>
+<p><strong>应用说明：</strong>将侨乡纹样融入新会陈皮包装设计，通过传统纹样与地域特产结合，使陈皮不仅成为地方产品，也成为承载侨乡文化记忆的礼赠载体。</p>
+<div class="app-kw"><span>「故土」</span><span>「根脉」</span><span>「传承」</span></div>
+</div>
+</div>
+<div class="app-chapter" id="app2">
+<div class="app-head r">
+<div class="app-num">02</div>
+<div class="app-head-text"><h3>渡口启程</h3><p>扬帆启程 · 侨路初航</p></div>
+</div>
+<div class="app-body">
+<div class="app-side app-pattern r d1">
+<div class="app-side-img"><img src="patterns-opt/02_渡口启程.png" alt="渡口启程纹样原稿" loading="lazy"></div>
+<span class="app-side-tag">纹样原稿</span>
+</div>
+<div class="app-flow r d2">
+<div class="flow-line"><span class="flow-progress"></span></div>
+<div class="flow-step"><span class="flow-icon">◈</span><b>文化元素</b><i>潭江渡口 · 风帆船 · 水纹 · 木棉花</i></div>
+<div class="flow-step"><span class="flow-icon">↧</span><b>图形提炼</b><i>几何化 · 简化</i></div>
+<div class="flow-step"><span class="flow-icon">◉</span><b>纹样重构</b><i>对称构成 · 重组</i></div>
+<div class="flow-step"><span class="flow-icon">▣</span><b>产品应用</b><i>侨乡茶礼盒</i></div>
+</div>
+<div class="app-side app-mockup r d3">
+<div class="app-side-img"><img src="applications/02_渡口启程.png" alt="侨乡茶礼盒" loading="lazy"></div>
+<span class="app-side-tag">侨乡茶礼盒</span>
+</div>
+</div>
+<div class="app-desc r">
+<p><strong>设计转译：</strong>提取侨乡先民离乡远行的历史场景，将帆船、水纹等动态元素进行图形化处理，以流动的曲线表现渡江启程的方向感；木棉花作为情感符号，象征故乡牵挂与生命力量。</p>
+<p><strong>应用说明：</strong>将渡口文化融入茶礼包装，以茶作为连接故乡与远方的媒介，展现五邑侨乡独特的人文交流历史。</p>
+<div class="app-kw"><span>「出发」</span><span>「交流」</span><span>「乡情」</span></div>
+</div>
+</div>
+<div class="app-chapter" id="app3">
+<div class="app-head r">
+<div class="app-num">03</div>
+<div class="app-head-text"><h3>远洋风浪</h3><p>远渡星海 · 逐梦海外</p></div>
+</div>
+<div class="app-body">
+<div class="app-side app-pattern r d1">
+<div class="app-side-img"><img src="patterns-opt/03_远洋风浪.png" alt="远洋风浪纹样原稿" loading="lazy"></div>
+<span class="app-side-tag">纹样原稿</span>
+</div>
+<div class="app-flow r d2">
+<div class="flow-line"><span class="flow-progress"></span></div>
+<div class="flow-step"><span class="flow-icon">◈</span><b>文化元素</b><i>海浪 · 指南针 · 船舵 · 海鸥 · 星辰</i></div>
+<div class="flow-step"><span class="flow-icon">↧</span><b>图形提炼</b><i>几何化 · 简化</i></div>
+<div class="flow-step"><span class="flow-icon">◉</span><b>纹样重构</b><i>对称构成 · 重组</i></div>
+<div class="flow-step"><span class="flow-icon">▣</span><b>产品应用</b><i>侨航纪念套装</i></div>
+</div>
+<div class="app-side app-mockup r d3">
+<div class="app-side-img"><img src="applications/03_远洋风浪.png" alt="侨航纪念套装" loading="lazy"></div>
+<span class="app-side-tag">侨航纪念套装</span>
+</div>
+</div>
+<div class="app-desc r">
+<p><strong>设计转译：</strong>以海洋航行为叙事核心，将指南针与船舵融合形成中心纹样，象征方向与探索；层叠海浪和星空元素构成远洋背景，表现五邑华侨跨越海洋、追寻梦想的历史精神。</p>
+<p><strong>应用说明：</strong>通过旅行纪念产品承载侨乡航海文化，让历史航程转化为现代人的文化体验。</p>
+<div class="app-kw"><span>「远航」</span><span>「探索」</span><span>「连接」</span></div>
+</div>
+</div>
+<div class="app-chapter" id="app4">
+<div class="app-head r">
+<div class="app-num">04</div>
+<div class="app-head-text"><h3>侨居新境</h3><p>融合共生 · 侨乡新貌</p></div>
+</div>
+<div class="app-body">
+<div class="app-side app-pattern r d1">
+<div class="app-side-img"><img src="patterns-opt/04_落地异域.png" alt="侨居新境纹样原稿" loading="lazy"></div>
+<span class="app-side-tag">纹样原稿</span>
+</div>
+<div class="app-flow r d2">
+<div class="flow-line"><span class="flow-progress"></span></div>
+<div class="flow-step"><span class="flow-icon">◈</span><b>文化元素</b><i>骑楼花窗 · 铁艺栏杆 · 鸡蛋花 · 金山箱</i></div>
+<div class="flow-step"><span class="flow-icon">↧</span><b>图形提炼</b><i>几何化 · 简化</i></div>
+<div class="flow-step"><span class="flow-icon">◉</span><b>纹样重构</b><i>对称构成 · 重组</i></div>
+<div class="flow-step"><span class="flow-icon">▣</span><b>产品应用</b><i>侨乡香氛产品</i></div>
+</div>
+<div class="app-side app-mockup r d3">
+<div class="app-side-img"><img src="applications/04_落地异域.png" alt="侨乡香氛产品" loading="lazy"></div>
+<span class="app-side-tag">侨乡香氛产品</span>
+</div>
+</div>
+<div class="app-desc r">
+<p><strong>设计转译：</strong>从五邑侨乡中西融合建筑中提取视觉语言，将骑楼花窗的几何结构、南洋铁艺装饰以及金山箱文化符号重新组合，呈现华侨文化交流融合后的独特地域风貌。</p>
+<p><strong>应用说明：</strong>利用香氛产品的情境属性，将骑楼空间、南洋生活气息与侨乡记忆结合，使传统纹样进入现代生活场景。</p>
+<div class="app-kw"><span>「融合」</span><span>「生活」</span><span>「新生」</span></div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- EXTRACTION FULL SHOWCASE -->
+<section id="extraction" class="es">
+<div class="ei"><div class="sh r"><p class="st">提取图鉴</p><h2 class="sti">从实物到纹样</h2><p class="sd">点击查看纹样提取与实物参考的对照</p></div>
+<div class="eg">
+<div class="e-item r d1" data-extract="禾穗提取.png" data-photo="禾穗图片.png" data-name="禾穗 · 土地记忆"><img src="assets/禾穗提取.png" alt="禾穗"><div class="el">禾穗</div></div>
+<div class="e-item r d2" data-extract="簕杜鹃提取.png" data-photo="簕杜鹃图片.png" data-name="簕杜鹃 · 故土之花"><img src="assets/簕杜鹃提取.png" alt="簕杜鹃"><div class="el">簕杜鹃</div></div>
+<div class="e-item r d3" data-extract="花窗提炼.png" data-photo="花窗图片.png" data-name="花窗 · 侨乡印记"><img src="assets/花窗提炼.png" alt="花窗"><div class="el">花窗</div></div>
+<div class="e-item r d4" data-extract="水流提取.png" data-photo="水流图片.png" data-name="水流 · 连接世界"><img src="assets/水流提取.png" alt="水流"><div class="el">水纹</div></div>
+<div class="e-item r d1" data-extract="木棉提取.png" data-photo="木棉花图片.png" data-name="木棉 · 故土力量"><img src="assets/木棉提取.png" alt="木棉"><div class="el">木棉</div></div>
+<div class="e-item r d2" data-extract="金山箱提取.png" data-photo="金山箱图片.png" data-name="金山箱 · 记忆载体"><img src="assets/金山箱提取.png" alt="金山箱"><div class="el">金山箱</div></div>
+<div class="e-item r d3" data-extract="海浪提取.png" data-photo="海浪图片.png" data-name="海浪 · 远洋征途"><img src="assets/海浪提取.png" alt="海浪"><div class="el">海浪</div></div>
+<div class="e-item r d4" data-extract="指南针提取.png" data-photo="指南针图片.png" data-name="指南针 · 探索方向"><img src="assets/指南针提取.png" alt="指南针"><div class="el">指南针</div></div>
+<div class="e-item r d1" data-extract="骑楼花窗提取.png" data-photo="骑楼花窗图片.png" data-name="骑楼花窗 · 中西融合"><img src="assets/骑楼花窗提取.png" alt="骑楼花窗"><div class="el">骑楼花窗</div></div>
+<div class="e-item r d2" data-extract="铁艺栏杆提取.png" data-photo="铁艺栏杆图片.png" data-name="铁艺 · 南洋装饰"><img src="assets/铁艺栏杆提取.png" alt="铁艺"><div class="el">铁艺</div></div>
+<div class="e-item r d3" data-extract="鸡蛋花提取.png" data-photo="鸡蛋花图片.png" data-name="鸡蛋花 · 异域生命"><img src="assets/鸡蛋花提取.png" alt="鸡蛋花"><div class="el">鸡蛋花</div></div>
+</div></div></section>
+
+
+
+<section class="ps">
+<div class="pi"><div class="sh r"><p class="st">色彩体系</p><h2 class="sti">侨乡色板</h2><p class="sd">从侨乡建筑、花卉、海洋中提取的色彩体系</p></div>
+<div class="pal">
+<div class="pli r d1"><div class="psw" style="background:#8B2A2A"><span style="color:#fff7e6;font-family:Inter,serif;font-size:12px">#8B2A2A</span></div><div class="pin"><h4>砖红色</h4><p>#8B2A2A</p></div></div>
+<div class="pli r d2"><div class="psw" style="background:#D4A843"><span style="color:#fff;font-family:Inter,serif;font-size:12px">#D4A843</span></div><div class="pin"><h4>麦黄色</h4><p>#D4A843</p></div></div>
+<div class="pli r d3"><div class="psw" style="background:#2C5F7A"><span style="color:#fff;font-family:Inter,serif;font-size:12px">#2C5F7A</span></div><div class="pin"><h4>深海蓝</h4><p>#2C5F7A</p></div></div>
+<div class="pli r d4"><div class="psw" style="background:#1A3C34"><span style="color:#fff;font-family:Inter,serif;font-size:12px">#1A3C34</span></div><div class="pin"><h4>青绿色</h4><p>#1A3C34</p></div></div>
+<div class="pli r d1"><div class="psw" style="background:#F5F0E8"><span style="color:#666;font-family:Inter,serif;font-size:12px">#F5F0E8</span></div><div class="pin"><h4>米白色</h4><p>#F5F0E8</p></div></div>
+</div></div></section>
+
+
+<!-- 参赛信息 -->
+<section id="entry" class="entry-section">
+<div class="entry-inner">
+<div class="sh r"><p class="st">参赛信息</p><h2 class="sti">作品提交</h2></div>
+<div class="entry-card r">
+<div class="entry-row"><span class="entry-label">组别</span><span class="entry-value">创意设计组（B组）</span></div>
+<div class="entry-row"><span class="entry-label">作品名称</span><span class="entry-value">侨纹新叙</span></div>
+<div class="entry-row"><span class="entry-label">参赛者</span><span class="entry-value">徐川川</span></div>
+<div class="entry-row"><span class="entry-label">参赛形式</span><span class="entry-value">个人参赛</span></div>
+<div class="entry-row"><span class="entry-label">联系方式</span><span class="entry-value">15014013437（微信同号）</span></div>
+</div>
+
+</div>
+</section>
+
+<footer>
+<h2>侨纹新叙</h2>
+<p>五邑侨乡花砖纹样数字转译设计项目<br>以纹样为载体，讲述华侨离乡远行的文化故事</p>
+<div class="fd"></div>
+<p style="font-size:13px;color:rgba(245,240,232,.6)">2026 年「侨纹新叙」文化创意大赛 · 创意设计组</p>
+
+<p style="font-size:12px;color:rgba(245,240,232,.3)">&copy; 2026 花砖新语 · 作品仅供大赛评审使用</p>
+</footer>
+
+<!-- Extraction Modal -->
+<div id="extractionModal" class="modal">
+<div class="modal-inner">
+<button class="modal-close" onclick="closeModal('extractionModal')">&times;</button>
+<div class="modal-title" id="modalTitle"></div>
+<div class="modal-sub" id="modalSub"></div>
+<div class="modal-grid">
+<div><p style="font-size:12px;color:#999;margin-bottom:6px;font-weight:500">纹样提取</p><img id="modalExtract" src="" alt="提取纹样"></div>
+<div><p style="font-size:12px;color:#999;margin-bottom:6px;font-weight:500">实物参考</p><img id="modalPhoto" src="" alt="实物参考"></div>
+</div>
+</div>
+</div>
+
+<!-- Pattern Detail Modal -->
+<div id="patternModal" class="modal">
+<div class="modal-inner" style="max-width:700px">
+<button class="modal-close" onclick="closeModal('patternModal')">&times;</button>
+<div class="modal-full">
+<img id="patternModalImg" src="" alt="" style="max-height:50vh;object-fit:contain">
+<div class="modal-title" id="patternModalTitle"></div>
+<div class="modal-sub" id="patternModalSub"></div>
+<div class="modal-body" id="patternModalBody"></div>
+</div>
+</div>
+</div>
+
+<script>
+// Extraction modal
+document.querySelectorAll('.ex-item, .e-item').forEach(function(el) {
+	el.addEventListener('click', function() {
+		var e = this.getAttribute('data-extract');
+		var p = this.getAttribute('data-photo');
+		var n = this.getAttribute('data-name');
+		if (e && p) {
+			document.getElementById('modalExtract').src = 'assets/' + e;
+			document.getElementById('modalPhoto').src = 'assets/photos/' + p;
+			document.getElementById('modalTitle').textContent = n;
+			document.getElementById('extractionModal').classList.add('show');
+		}
+	});
+});
+
+// Pattern detail modal
+var patternDetails = {
+	1: {
+		title: '辞别故土 · 离乡远行 眷恋家园',
+		sub: '簕杜鹃 · 麦穗 · 建筑花窗 · 砖红色',
+		body: '<p>五邑侨乡是一片连接故土与世界的土地，无数华侨从这里启航远行。</p><p><strong>设计理念：</strong>从五邑侨乡传统建筑装饰与地域植物文化中提取视觉元素，将承载乡土情感的簕杜鹃、麦穗、建筑花窗纹样进行重新解构与组合，形成具有侨乡特色的现代花砖纹样。通过纹样的对称结构与装饰语言，表现侨乡人民离开故土、走向远方时，对家园土地的眷恋与文化传承。</p><p><strong>文化元素：</strong>簕杜鹃作为五邑地区代表性植物意象，其鲜艳的花形承载着故乡的生命气息；麦穗象征土地、收获与乡土生活；建筑花窗来源于侨乡传统建筑中的装饰构件，是连接内外的文化窗口。</p><p><strong>色彩体系：</strong>以砖红色为主色调，对应簕杜鹃花色，象征热烈的乡土情感。</p>'
+	},
+	2: {
+		title: '渡口启程 · 水路交汇 扬帆远航',
+		sub: '潭江水纹 · 木棉花 · 船帆 · 油纸伞',
+		body: '<p>五邑侨乡因水而兴，潭江水系连接着乡土与世界，也见证了一代代华侨从家乡出发、远渡重洋的历史。</p><p><strong>设计理念：</strong>从五邑侨乡的自然环境、交通记忆以及岭南生活文化中提取视觉符号，将潭江水纹、木棉花、船帆结构等元素进行提炼与重构。通过对称构成、形态简化与装饰化处理，将"离乡启航"的历史记忆转化为具有传播价值的文化视觉符号。</p><p><strong>文化元素：</strong>水纹表现故乡与世界之间的文化交流；木棉花代表扎根故土的生命力量；船帆承载五邑华侨出洋发展的历史记忆。</p><p><strong>色彩体系：</strong>以木棉红与江水青为主色，表现热烈的生命力与流动的连接。</p>'
+	},
+	3: {
+		title: '远洋风浪 · 跨越风浪 探索方向',
+		sub: '海浪 · 罗盘 · 船舵 · 海鸥 · 星辰',
+		body: '<p>五邑侨乡因海而兴，无数华侨曾乘船远渡重洋，在未知的海域中寻找新的发展机遇。</p><p><strong>设计理念：</strong>以五邑侨乡海洋文化为灵感来源，从远洋航行中的海浪、航海罗盘、船舵、海鸥、星辰航线等视觉符号中提取文化元素。以海浪作为主要视觉语言表现海洋的流动与力量，以指南针与船舵结合形成中心符号，象征华侨漂洋过海时对方向与未来的探索精神。</p><p><strong>文化元素：</strong>海浪表现跨越风浪的力量；罗盘代表探索方向的精神；船舵象征面对未知的勇气；海鸥寓意自由跨越地域；星辰航线连接故土与世界。</p><p><strong>色彩体系：</strong>以深海蓝与暖金色为主，表现远洋旅程中的辽阔与探索精神。</p>'
+	},
+	4: {
+		title: '落地异域 · 骑楼花窗 中西融合',
+		sub: '骑楼花窗 · 铁艺卷草 · 金山箱 · 鸡蛋花',
+		body: '<p>五邑华侨远渡重洋，在陌生土地上建立新的生活空间。漂洋而来的不仅是个人的行囊，更有故乡的建筑记忆与审美符号。</p><p><strong>设计理念：</strong>以华侨抵达异域后的生活场景为线索，从骑楼建筑、铁艺装饰、金山箱器物以及南洋植物中提取视觉元素，重新构建属于侨乡文化的纹样语言。在海外环境的影响下，中式建筑装饰与西方建筑形式相互融合，逐渐形成具有时代特色的侨乡建筑文化。</p><p><strong>文化元素：</strong>骑楼花窗体现中西文化交融；铁艺卷草展现西方装饰艺术的东方延续；金山箱承载华侨迁徙中的个人记忆；鸡蛋花象征在异国土地上的扎根与生长。</p><p><strong>色彩体系：</strong>融合砖红、深海蓝与暖金色，表现中西融合的文化质感。</p>'
+	}
+};
+
+function openPatternModal(idx) {
+	var d = patternDetails[idx];
+	if (!d) return;
+	var imgSrc = 'patterns/0' + idx + '_';
+	var names = ['','辞别故土','渡口启程','远洋风浪','落地异域'];
+	document.getElementById('patternModalImg').src = 'patterns/0' + idx + '_' + names[idx] + '.png';
+	document.getElementById('patternModalTitle').textContent = d.title;
+	document.getElementById('patternModalSub').textContent = d.sub;
+	document.getElementById('patternModalBody').innerHTML = d.body;
+	document.getElementById('patternModal').classList.add('show');
+}
+
+function closeModal(id) {
+	document.getElementById(id).classList.remove('show');
+}
+
+// Click outside to close
+document.getElementById('extractionModal').addEventListener('click', function(e) {
+	if (e.target === this) this.classList.remove('show');
+});
+document.getElementById('patternModal').addEventListener('click', function(e) {
+	if (e.target === this) this.classList.remove('show');
+});
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') {
+	document.getElementById('extractionModal').classList.remove('show');
+	document.getElementById('patternModal').classList.remove('show');
+}});
+
+// Scroll reveal
+var ro = new IntersectionObserver(function(e) {
+	e.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('v'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.r').forEach(function(e) { ro.observe(e); });
+
+// Nav scroll
+var nav = document.getElementById('nav'), lastScroll = 0;
+window.addEventListener('scroll', function() {
+	var cs = window.pageYOffset;
+	nav.classList.toggle('hidden', cs > lastScroll && cs > 100);
+	lastScroll = cs;
+});
+
+// Application flow animation
+document.querySelectorAll('.app-flow').forEach(function(flow) {
+  var steps = flow.querySelectorAll('.flow-step');
+  var flowObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        flow.classList.add('active');
+        steps.forEach(function(s, idx) {
+          setTimeout(function() { s.classList.add('on'); }, idx * 350);
+        });
+      }
+    });
+  }, { threshold: 0.35 });
+  flowObserver.observe(flow);
+});
+
+</script>
+</body>
+</html>
